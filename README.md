@@ -2,9 +2,8 @@
 9/14/2018
 9:58pm
 
-Decided to work on a chrome extension (https://developer.chrome.com/extensions/getstarted)
-Sample chrome extension
-(https://developers.chrome.com/extensions/samples)
+Decided to work on a chrome extension 
+
 Functionality: match the message with search across platform for memes (using api)
 goal : build prototype, how to run the algorithms for search methods
 
