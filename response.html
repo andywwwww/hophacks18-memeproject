@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<img id="target" src="http://www.java2s.com/style/download.png" width="107" height="98" />
+<input type="button" onclick="nextPic()" value="change image" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $.getJSON('names.json',function(data){
+            console.log('success');
+            $.each(data.employees,function(i,emp){
+                $('ul').append('<li>'+emp.firstName+' '+emp.lastName+'</li>');
+            });
+        }).error(function(){
+            console.log('error');
+        });
+    });
+</script>
+
+<script>
+    var target = document.getElementById('target');
+    var counter = 0;
+    var myPictures = [
+        "http://imgur.com/gallery/11XZy1C/new",
+        "http://i.imgur.com/n4zn1eo.jpg",
+        "http://i.imgur.com/G7n1W.jpg",
+        "http://i.imgur.com/YqCngAK.jpg",
+        "http://i.imgur.com/h1fhlxO.jpg",
+        "http://i.imgur.com/m5M0dh9.jpg",
+        "http://i.imgur.com/RbJu4Hf.jpg", "http://i.imgur.com/fIdRCQQ.jpg", "http://i.imgur.com/ACuNEYN.jpg",  "http://i.imgur.com/PpSDEfx.png"
+    ];
+
+    function nextPic() {
+        counter += 1;
+        if (counter > myPictures.length -1) {
+            counter = 0;
+        }
+        target.src = myPictures[counter];
+    }
+</script>
+
+
+</body>
+</html>
