@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<img id="target" src="http://www.java2s.com/style/download.png" width="500" height="500" />
+<input type="button" onclick="nextPic()" value="change image" />
+<script>
+    var target = document.getElementById('target');
+    var counter = 0;
+    <!--this data is pre-set. Our goal is to work with python file-->
+    var myPictures = [
+        "https://i.imgur.com/xfT51uO.png",
+        "https://vgy.me/PUw6hI.jpg",
+        "http://i.imgur.com/aNOy3i1.jpg",
+        "http://i.imgur.com/G7n1W.jpg",
+        "http://i.imgur.com/YqCngAK.jpg",
+        "http://i.imgur.com/h1fhlxO.jpg",
+        "http://i.imgur.com/PpSDEfx.png"
+    ];
+    function nextPic() {
+        counter += 1;
+        if (counter > myPictures.length -1) {
+            counter = 0;
+        }
+        target.src = myPictures[counter];
+    }
+</script>
+</body>
+</html>
