@@ -17,9 +17,12 @@ Try for display three at the same time and only display 1 and refresh
 
 Meme web:
 https://imgur.com/  OK rank by likes (factor: viral )
+
 https://www.programmableweb.com/api/reddit   OK rank by views (hot (limit=10))
+
 https://9gag.com/
 Save picture -> extension
+
 https://www.pinterest.com/
 
 Later
